@@ -1,0 +1,426 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <!-- Place favicon.ico in the root directory -->
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/base.css">
+
+
+  <meta name="theme-color" content="#fafafa">
+
+  <!--Additional-->
+  <script id="applicationScript" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script id="applicationScript" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/TweenMax.min.js"></script>
+  
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.5.0/css/ol.css" type="text/css">
+  <script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.5.0/build/ol.js"></script>
+ 
+  <!--Leaflet-->
+  <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+  <script>
+    $(document).ready(function(){
+  $(".openbtn").click(function(){
+    $("#div1").fadeIn();
+ 
+  });
+});
+  </script>
+ <style>
+   .map {
+    height: 100%;
+    width: 100vw;
+    
+  }
+ </style>
+</head>
+
+<body>
+    <div class="progress-wrap">
+        <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+          <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"/>
+        </svg>
+      </div>
+ <!--NavBar-->
+
+  <nav id="navbar" class="">
+    <div class="nav-wrapper">
+      <!-- Navbar Logo -->
+      <div class="logo">
+        <!-- Logo Placeholder for Inlustration -->
+        <a href="index.html"></a><i class="fab fa-500px"></i>Geoleric Consultants | Built Enviroment Consultants.</a>
+      </div>
+  
+      <!-- Navbar Links -->
+
+      <ul class="search-bar">
+        <li>
+          <input type="text" placeholder="Search..">
+</li>
+      </ul>
+        <ul class="topnav-right ">
+            
+            <li><a href="#home"><i class="fa fa-sign-in" aria-hidden="true"></i>Login</a></li><!--
+  --><li><a href="#home"><i class="fa fa-user-plus" aria-hidden="true"></i>Sign in</a></li><!---->
+</ul>
+<ul class="menuIcon openbtn" onclick="openNav()">
+  <li> 
+    <span class="icon icon-bars"></span>
+    <span class="icon icon-bars overlay"></span>
+  </li>
+</ul>
+
+      
+
+    </div>
+  </nav>
+
+  
+  <!-- Menu Icon -->
+  <div class="sidepanel" id="mySidepanel" ">
+    <ul class="sidenav" style="margin-right: 0 !important;">
+      <li class="dropdown-btn">
+        <a>Data <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+      </li>
+      <div class="dropdown-container">
+        <a href="#">Layers</a>
+        <a href="#">Documents</a>
+        <a href="#">Remote Services</a>
+   
+        <a href="#">Upload Layer</a>
+        <a href="#">Create Layer</a>
+        <a href="#">Upload Document</a>
+      </div>
+      <li class="dropdown-btn">
+        <a>Maps<i class="fa fa-angle-down" aria-hidden="true"></i></a>
+      </li>
+      <div class="dropdown-container">
+        <a href="#">Explore Maps</a>
+        <a href="#">Create Map</a>
+      </div>
+      <li class="dropdown-btn">
+        <a>Apps<i class="fa fa-angle-down" aria-hidden="true"></i></a>
+      </li>    
+      <div class="dropdown-container">
+        <a href="#">Explore Apps</a>
+      </div>
+      <li class="dropdown-btn">
+        <a>About<i class="fa fa-angle-down" aria-hidden="true"></i></a>
+      </li>
+      <div class="dropdown-container">
+        <a href="#">People</a>
+        <a href="#">Groups</a>
+        <a href="#">Group Categories</a>
+
+        <a href="#">Invite Users</a>
+
+      </div>
+    
+ 
+    <li>
+      <a href="#" class="button" href="javascript:void(0)" onclick="closeNav()">
+        <span>C</span><span>L</span><span>O</span><span>S</span><span>E</span>
+       
+        <b class="backgroundHover"></b>
+      </a>
+    </li>
+  </ul>
+  </div>
+
+
+<nav id="navbar">
+  <div class="nav-wrapper"></div>
+
+  <ul>
+    <li><a href="index.html"><i class="fa fa-fw fa-home"></i>Home</a></li>|
+    <li><a href="Services.html" class="active"><i class="fa fa-fw fa-industry"></i></i>Services</a></li>|
+   <!-- <li><a href="geoportal.html"><i class="fa fa-fw fa-globe"></i>Geoportal</a></li>-->
+    <li><a href="Contacts.html" ><i class="fa fa-fw fa-globe"></i>Contacts</a></li>
+  </ul>
+  </div>
+</nav> </br></br></br></br>
+
+ <!--Next Section-->
+
+ <div class="section-text">
+    <div class="top-border-text left"></div>
+    <div class="top-border-text right"></div>
+    <h1>SERVICES</h1>
+  
+  </div>
+    <div class="body-content">
+      <b><h3>SERVICES.</u></h3></b>
+
+      <div class="blog-card">
+        <div class="meta">
+          <div class="photo" style="background-image: url(http://www.geolericconsultancy.com/images/land%20use.jpg)"></div>
+        <!-- <ul class="details">
+            <li class="author"><a href="#">John Doe</a></li>
+            <li class="date">Aug. 24, 2015</li>
+            <li class="tags">
+              <ul>
+                <li><a href="#">Learn</a></li>
+                <li><a href="#">Code</a></li>
+                <li><a href="#">HTML</a></li>
+                <li><a href="#">CSS</a></li>
+              </ul>
+            </li>
+          </ul>-->
+        </div>
+        <div class="description">
+          <h1>Land use planning </h1>
+          <h2>advisory/services</h2>
+          <p style="text-align: justify; text-justify: inter-word;"> Undertaking socio-economic studies and surveys (Housing, industrial, commercial, transport, infrastructure, economic, socio-cultural, institutional/legal e.t.c) and preparation of urban development plans. This includes Long Term and Short-Term physical development plans, including preparation of housing site layout plans, sub-division schemes, land amalgamation, change of use, extension of use, extension/renewal of lease etc.</p>
+        <!--  <p class="read-more">
+            <a href="#">Read More</a>
+          </p>-->
+        </div>
+      </div></br></br>
+      <div class="blog-card alt">
+        <div class="meta">
+          <div class="photo" style="background-image: url(http://www.geolericconsultancy.com/images/survay.jpg)"></div>
+         <!-- <ul class="details">
+            <li class="author"><a href="#">Jane Doe</a></li>
+            <li class="date">July. 15, 2015</li>
+            <li class="tags">
+              <ul>
+                <li><a href="#">Learn</a></li>
+                <li><a href="#">Code</a></li>
+                <li><a href="#">JavaScript</a></li>
+              </ul>
+            </li>
+          </ul>-->
+        </div>
+        <div class="description">
+          <h1>Land Survey</h1>
+          <h2>advisory/services</h2>
+          <p style="text-align: justify;" text-justify: inter-word;>Land survey and administration has overly been the inception of different developments and activities relating to land. The consultancy had been diversly been involved and engaged in different survey works at different levels this within Machakos, Kitui, Kiambu and Makueni Counties.</p>
+         <!-- <p class="read-more">
+            <a href="#">Read More</a>
+          </p>-->
+        </div>
+      </div> </br></br>
+
+ <!--Next-->
+ <div class="blog-card">
+  <div class="meta">
+    <div class="photo" style="background-image: url(https://storage.googleapis.com/chydlx/codepen/blog-cards/image-1.jpg)"></div>
+
+  </div>
+  <div class="description">
+    <h1>Learning to Code</h1>
+    <h2>Opening a door to the future</h2>
+    <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad eum dolorum architecto obcaecati enim dicta praesentium, quam nobis! Neque ad aliquam facilis numquam. Veritatis, sit.</p>
+
+  </div>
+</div></br></br>
+<div class="blog-card alt">
+  <div class="meta">
+    <div class="photo" style="background-image: url(https://storage.googleapis.com/chydlx/codepen/blog-cards/image-2.jpg)"></div>
+    
+  </div>
+  <div class="description">
+    <h1>Mastering the Language</h1>
+    <h2>Java is not the same as JavaScript</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad eum dolorum architecto obcaecati enim dicta praesentium, quam nobis! Neque ad aliquam facilis numquam. Veritatis, sit.</p>
+
+  </div>
+</div></br></br>
+
+<!--Next-->
+<div class="blog-card">
+  <div class="meta">
+    <div class="photo" style="background-image: url(https://storage.googleapis.com/chydlx/codepen/blog-cards/image-1.jpg)"></div>
+
+  </div>
+  <div class="description">
+    <h1>Learning to Code</h1>
+    <h2>Opening a door to the future</h2>
+    <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad eum dolorum architecto obcaecati enim dicta praesentium, quam nobis! Neque ad aliquam facilis numquam. Veritatis, sit.</p>
+
+  </div>
+</div></br></br>
+<div class="blog-card alt">
+  <div class="meta">
+    <div class="photo" style="background-image: url(https://storage.googleapis.com/chydlx/codepen/blog-cards/image-2.jpg)"></div>
+    
+  </div>
+  <div class="description">
+    <h1>Mastering the Language</h1>
+    <h2>Java is not the same as JavaScript</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad eum dolorum architecto obcaecati enim dicta praesentium, quam nobis! Neque ad aliquam facilis numquam. Veritatis, sit.</p>
+
+  </div>
+</div></br></br>
+<!--Next-->
+<div class="blog-card">
+  <div class="meta">
+    <div class="photo" style="background-image: url(https://storage.googleapis.com/chydlx/codepen/blog-cards/image-1.jpg)"></div>
+
+  </div>
+  <div class="description">
+    <h1>Learning to Code</h1>
+    <h2>Opening a door to the future</h2>
+    <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad eum dolorum architecto obcaecati enim dicta praesentium, quam nobis! Neque ad aliquam facilis numquam. Veritatis, sit.</p>
+
+  </div>
+</div></br></br>
+<div class="blog-card alt">
+  <div class="meta">
+    <div class="photo" style="background-image: url(https://storage.googleapis.com/chydlx/codepen/blog-cards/image-2.jpg)"></div>
+    
+  </div>
+  <div class="description">
+    <h1>Mastering the Language</h1>
+    <h2>Java is not the same as JavaScript</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad eum dolorum architecto obcaecati enim dicta praesentium, quam nobis! Neque ad aliquam facilis numquam. Veritatis, sit.</p>
+
+  </div>
+</div></br></br>
+
+<!--Next-->
+<div class="blog-card">
+  <div class="meta">
+    <div class="photo" style="background-image: url(https://storage.googleapis.com/chydlx/codepen/blog-cards/image-1.jpg)"></div>
+
+  </div>
+  <div class="description">
+    <h1>Learning to Code</h1>
+    <h2>Opening a door to the future</h2>
+    <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad eum dolorum architecto obcaecati enim dicta praesentium, quam nobis! Neque ad aliquam facilis numquam. Veritatis, sit.</p>
+
+  </div>
+</div></br></br>
+<div class="blog-card alt">
+  <div class="meta">
+    <div class="photo" style="background-image: url(https://storage.googleapis.com/chydlx/codepen/blog-cards/image-2.jpg)"></div>
+    
+  </div>
+  <div class="description">
+    <h1>Mastering the Language</h1>
+    <h2>Java is not the same as JavaScript</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad eum dolorum architecto obcaecati enim dicta praesentium, quam nobis! Neque ad aliquam facilis numquam. Veritatis, sit.</p>
+
+  </div>
+</div></br></br>
+<!--Next-->
+<div class="blog-card">
+  <div class="meta">
+    <div class="photo" style="background-image: url(https://storage.googleapis.com/chydlx/codepen/blog-cards/image-1.jpg)"></div>
+
+  </div>
+  <div class="description">
+    <h1>Learning to Code</h1>
+    <h2>Opening a door to the future</h2>
+    <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad eum dolorum architecto obcaecati enim dicta praesentium, quam nobis! Neque ad aliquam facilis numquam. Veritatis, sit.</p>
+
+  </div>
+</div></br></br>
+<div class="blog-card alt">
+  <div class="meta">
+    <div class="photo" style="background-image: url(https://storage.googleapis.com/chydlx/codepen/blog-cards/image-2.jpg)"></div>
+    
+  </div>
+  <div class="description">
+    <h1>Mastering the Language</h1>
+    <h2>Java is not the same as JavaScript</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad eum dolorum architecto obcaecati enim dicta praesentium, quam nobis! Neque ad aliquam facilis numquam. Veritatis, sit.</p>
+
+  </div>
+</div>
+</div>
+
+  
+
+
+  <div class="footer">
+    
+
+    Copyright © 2021 All Rights Reserved by Runguma.
+
+    <div class="footer-social-icons">
+      
+      <ul class="social-icons">
+          <li><a href="" class="social-icon"> <i class="fa fa-facebook"></i></a></li>
+          <li><a href="" class="social-icon"> <i class="fa fa-twitter"></i></a></li>
+          <li><a href="" class="social-icon"> <i class="fa fa-rss"></i></a></li>
+          <li><a href="" class="social-icon"> <i class="fa fa-youtube"></i></a></li>
+          <li><a href="" class="social-icon"> <i class="fa fa-linkedin"></i></a></li>
+          <li><a href="" class="social-icon"> <i class="fa fa-github"></i></a></li>
+      </ul>
+  </div>
+  </div>
+  
+     <!-- /#wrapper -->
+ <!-- partial -->
+ 
+ 
+   
+  
+  <script src="js/vendor/modernizr-3.11.2.min.js"></script>
+  <script src="js/plugins.js"></script>
+  <script src="js/mobilemenu.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/sidemenu.js"></script>
+  <script src="js/btt.js"></script>
+
+  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+  <script>
+    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+    ga('create', 'UA-XXXXX-Y', 'auto'); ga('set', 'anonymizeIp', true); ga('set', 'transport', 'beacon'); ga('send', 'pageview')
+  </script>
+  <script src="https://www.google-analytics.com/analytics.js" async></script>
+ 
+    
+</body>
+
+</html>
+
+
+
+<!--Scripts-->
+
+<script src="js/vendor/modernizr-3.11.2.min.js"></script>
+<script src="js/plugins.js"></script>
+<script src="js/mobilemenu.js"></script>
+<script src="js/main.js"></script>
+<script src="js/sidemenu.js"></script>
+
+<!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+<script>
+  window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+  ga('create', 'UA-XXXXX-Y', 'auto'); ga('set', 'anonymizeIp', true); ga('set', 'transport', 'beacon'); ga('send', 'pageview')
+</script>
+<script src="https://www.google-analytics.com/analytics.js" async></script>
+
+  
+</body>
+
+</html>

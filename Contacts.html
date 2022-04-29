@@ -1,0 +1,299 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <!-- Place favicon.ico in the root directory -->
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/base.css">
+
+
+  <meta name="theme-color" content="#fafafa">
+
+  <!--Additional-->
+  <script id="applicationScript" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script id="applicationScript" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/TweenMax.min.js"></script>
+  
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.5.0/css/ol.css" type="text/css">
+  <script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.5.0/build/ol.js"></script>
+ 
+  <!--Leaflet-->
+  <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+  <script>
+    $(document).ready(function(){
+  $(".openbtn").click(function(){
+    $("#div1").fadeIn();
+ 
+  });
+});
+  </script>
+ <style>
+div.frame{
+    width:100%;
+    height:800px;
+    border:none;
+
+}
+iframe{
+    width:100%;
+    height:100%;
+    border:none;
+}
+ </style>
+</head>
+
+<body>
+    <div class="progress-wrap">
+        <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+          <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"/>
+        </svg>
+      </div>
+ <!--NavBar-->
+
+  <nav id="navbar" class="">
+    <div class="nav-wrapper">
+      <!-- Navbar Logo -->
+      <div class="logo">
+        <!-- Logo Placeholder for Inlustration -->
+        <a href="index.html"></a><i class="fab fa-500px"></i>Geoleric Consultants | Built Enviroment Consultants.</a>
+      </div>
+  
+      <!-- Navbar Links -->
+
+      <ul class="search-bar">
+        <li>
+          <input type="text" placeholder="Search..">
+</li>
+      </ul>
+        <ul class="topnav-right ">
+            
+            <li><a href="#home"><i class="fa fa-sign-in" aria-hidden="true"></i>Login</a></li><!--
+  --><li><a href="#home"><i class="fa fa-user-plus" aria-hidden="true"></i>Sign in</a></li><!---->
+</ul>
+<ul class="menuIcon openbtn" onclick="openNav()">
+  <li> 
+    <span class="icon icon-bars"></span>
+    <span class="icon icon-bars overlay"></span>
+  </li>
+</ul>
+
+      
+
+    </div>
+  </nav>
+
+  
+  <!-- Menu Icon -->
+  <div class="sidepanel" id="mySidepanel" ">
+    <ul class="sidenav" style="margin-right: 0 !important;">
+      <li class="dropdown-btn">
+        <a>Data <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+      </li>
+      <div class="dropdown-container">
+        <a href="#">Layers</a>
+        <a href="#">Documents</a>
+        <a href="#">Remote Services</a>
+   
+        <a href="#">Upload Layer</a>
+        <a href="#">Create Layer</a>
+        <a href="#">Upload Document</a>
+      </div>
+      <li class="dropdown-btn">
+        <a>Maps<i class="fa fa-angle-down" aria-hidden="true"></i></a>
+      </li>
+      <div class="dropdown-container">
+        <a href="#">Explore Maps</a>
+        <a href="#">Create Map</a>
+      </div>
+      <li class="dropdown-btn">
+        <a>Apps<i class="fa fa-angle-down" aria-hidden="true"></i></a>
+      </li>    
+      <div class="dropdown-container">
+        <a href="#">Explore Apps</a>
+      </div>
+      <li class="dropdown-btn">
+        <a>About<i class="fa fa-angle-down" aria-hidden="true"></i></a>
+      </li>
+      <div class="dropdown-container">
+        <a href="#">People</a>
+        <a href="#">Groups</a>
+        <a href="#">Group Categories</a>
+
+        <a href="#">Invite Users</a>
+
+      </div>
+    
+ 
+    <li>
+      <a href="#" class="button" href="javascript:void(0)" onclick="closeNav()">
+        <span>C</span><span>L</span><span>O</span><span>S</span><span>E</span>
+       
+        <b class="backgroundHover"></b>
+      </a>
+    </li>
+  </ul>
+  </div>
+
+
+<nav id="navbar">
+  <div class="nav-wrapper"></div>
+
+  <ul>
+    <li><a href="index.html"><i class="fa fa-fw fa-home"></i>Home</a></li>|
+    <li><a href="Services.html"><i class="fa fa-fw fa-industry"></i></i>Services</a></li>|
+   <!-- <li><a href="geoportal.html"><i class="fa fa-fw fa-globe"></i>Geoportal</a></li>-->
+    <li><a href="Contacts.html" class="active" ><i class="fa fa-fw fa-globe"></i>Contacts</a></li>
+  </ul>
+  </div>
+</nav> </br></br></br></br>
+
+ <!--Next Section-->
+ <div class="section-text">
+    <div class="top-border-text left"></div>
+    <div class="top-border-text right"></div>
+    <h1>CONTACT US</h1>
+  
+  </div>
+ <div class="body-content">
+     
+    <div class="frame">
+        <iframe src="contact_form.html"></iframe>
+    </div>
+ <table style="width:auto">
+    <tr>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+    <tr>
+      <td><img src="https://ago-item-storage.s3.us-east-1.amazonaws.com/ced9be71592d4a2aadd88fdf1fa7012f/logo.jpg?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEDIaCXVzLWVhc3QtMSJGMEQCICmBV7a1lIojCWe1wHEeOh5F1BDOElMQ6kQjhyoXVb2%2BAiAkai13r50p%2FjFPnXa7tUzUlB4Bkx2RJKjimmSpBNnPAirbBAjr%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F8BEAAaDDYwNDc1ODEwMjY2NSIMy%2FhacBS9JxAj8L47Kq8EnZ0Ze67lu1qzew%2FRp22V1e2YZ%2FRUZzYfIpQJq%2BvObmJ9dQYO12XPJx12%2BGfza9MmFeb7U5s7tVWZ%2F6V5FF2Mckwpq%2BFotHL14lf018%2FM%2FqgZSoS71v23PJmLE8c2ae0vaZAc919RSmde415d72DzECC7%2BgZuL6Lc5a0sRt6hkL8yRK9XsRdEHU19XCgABUz2xPo8XSnV22r%2Fs5C0QYHPqC%2FGWsePma9j%2FV%2ByJOp3fRnLe%2F%2BOYA7gqzg8aZxap%2BDA0%2FhWqbp7UvBp7iVpJ9WRD02WjAS1fUqKojDLEwzhoPag7A6gorJNHSYKYNSdzfhZTnbxdRaEVHDNd%2FAKmW13tOH6ObdVClEbjNwcZE9pHPnxc7Ys00isuPlqBAoNA2%2Fg2hVKlCzgv6k1tt3jiVPHOLBNVCue90k86FiZG%2FFsln247Wq7k4ZJxt9dGTBZGEi0Oli82CqndQ%2BevHivzgLcoxuc0HJk6X9rF4iFTYQKU8ulKrBOLzAlZQeQdaYsjCpXK%2F8EPxnkyDzgnPKjl82ZWtKwh4u82xyHgb6Ma2P8a4efZy1AY6B%2BaxGar9Y6J78Rt3bkIXCfjMrVa3TetqT9U%2F47w0QKH0LeftqzRD5lF4VWgXf8PfckNIAgbl3XdsHkKNMyL8xz7N8ZsCrLUHRildm7FNPM0piWm442Yq9HkrolsCcTCGsUFrK2W5yI49UfcKfASHyDTBbukPAJnnPjw63Y6eADGSlAkZytNCFMcDCB6K6TBjqqAVyMb%2FUsWq4yH9YFK9SQnIphpsGapSqBcmpspOiJ3QAVR6C1WpffcNQOPLNrqpfXxlouz2j%2F%2F8l0gGLSxorON7qKebd7TCDXR7Z770QHIB8mt5Txd1t7fBYzqi3FGwCuJdX%2BgGWsFmNwg08Wh5tI%2F%2FBg3qD2A8DRcRHQQ6OOrADjxtKyyiONpL%2FSw6q95Sz97QZJSPMYVYULHKchV7CgK%2B%2B895koN01%2FtlTa&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20220429T105408Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Credential=ASIAYZTTEKKE6S26EGZQ%2F20220429%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=8e8f98171fc8f366d5efb5afe22f95e2ad03501099b8c01b924022a53b7a78bb" width="200" /></td>
+      <td>
+      <p>Location : Nairobi</p></br></br>
+  <p>Street: Moi Avenue</p></br>
+  <p>Building : Bihi Complex</p></br>
+  <p>PO. Box :105218-00101 Nairobi</p>
+      </td>
+      <td>
+      <p>Location : Machakos Town</p></br>
+  <p>Street : Mbolu Malu Street</p></br>
+  <p>Building : Mbitini Plaza</p></br>
+  <p>Office : 1st Floor Suite 001</p></br>
+  <p>P.O. Box :86-90100 Machakos</p></td>
+  <td>
+<p>
+    Email : geolericconsultancy@gmail.com
+</p>
+<p>
+    Call us on:</br>
+
+phone 1: 0727961600</br>
+phone 2: 0712310008</br>
+phone 3: 0701971107
+</p>
+
+  </td>
+    </tr>
+  
+  </table>
+  
+</div>
+
+  <div class="footer">
+    
+
+    Copyright © 2021 All Rights Reserved by Runguma.
+
+    <div class="footer-social-icons">
+      
+      <ul class="social-icons">
+          <li><a href="" class="social-icon"> <i class="fa fa-facebook"></i></a></li>
+          <li><a href="" class="social-icon"> <i class="fa fa-twitter"></i></a></li>
+          <li><a href="" class="social-icon"> <i class="fa fa-rss"></i></a></li>
+          <li><a href="" class="social-icon"> <i class="fa fa-youtube"></i></a></li>
+          <li><a href="" class="social-icon"> <i class="fa fa-linkedin"></i></a></li>
+          <li><a href="" class="social-icon"> <i class="fa fa-github"></i></a></li>
+      </ul>
+  </div>
+  </div>
+  
+     <!-- /#wrapper -->
+ <!-- partial -->
+ 
+ 
+   
+  
+  <script src="js/vendor/modernizr-3.11.2.min.js"></script>
+  <script src="js/plugins.js"></script>
+  <script src="js/mobilemenu.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/sidemenu.js"></script>
+  <script src="js/btt.js"></script>
+
+  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+  <script>
+    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+    ga('create', 'UA-XXXXX-Y', 'auto'); ga('set', 'anonymizeIp', true); ga('set', 'transport', 'beacon'); ga('send', 'pageview')
+  </script>
+  <script src="https://www.google-analytics.com/analytics.js" async></script>
+  <script type="text/javascript">
+    $('document').ready(function(){
+        $('div.frame').load('/links/links1.html');
+    });
+    </script>
+ 
+    
+</body>
+
+</html>
+
+
+
+<!--Scripts-->
+
+<script src="js/vendor/modernizr-3.11.2.min.js"></script>
+<script src="js/plugins.js"></script>
+<script src="js/mobilemenu.js"></script>
+<script src="js/main.js"></script>
+<script src="js/sidemenu.js"></script>
+
+<!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+<script>
+  window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+  ga('create', 'UA-XXXXX-Y', 'auto'); ga('set', 'anonymizeIp', true); ga('set', 'transport', 'beacon'); ga('send', 'pageview')
+</script>
+<script src="https://www.google-analytics.com/analytics.js" async></script>
+
+
+  
+</body>
+
+
+
+</html>

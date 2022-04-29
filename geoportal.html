@@ -1,0 +1,433 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <!-- Place favicon.ico in the root directory -->
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/geoportal.css">
+
+
+  <meta name="theme-color" content="#fafafa">
+
+  <!--Additional-->
+  <script id="applicationScript" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script id="applicationScript" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/TweenMax.min.js"></script>
+  
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.5.0/css/ol.css" type="text/css">
+  <script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.5.0/build/ol.js"></script>
+  <link rel="stylesheet" href="css/L.Icon.Pulse.css" />
+  <script src="js/L.Icon.Pulse.js"></script>
+</head>
+
+<body>
+  <nav id="navbar" class="">
+    <div class="nav-wrapper">
+      <!-- Navbar Logo -->
+      <div class="logo">
+        <!-- Logo Placeholder for Inlustration -->
+        <a href="index.html"></a><i class="fab fa-500px"></i>Geoleric Consultants.</a>
+      </div>
+  
+      <!-- Navbar Links -->
+
+      <ul class="search-bar">
+        <li>
+          <input type="text" placeholder="Search..">
+</li>
+      </ul>
+        <ul class="topnav-right ">
+            
+            <li><a href="#home"><i class="fa fa-sign-in" aria-hidden="true"></i>Login</a></li><!--
+  --><li><a href="#home"><i class="fa fa-user-plus" aria-hidden="true"></i>Sign in</a></li><!---->
+</ul>
+<ul class="menuIcon openbtn" onclick="openNav()">
+  <li> 
+    <span class="icon icon-bars"></span>
+    <span class="icon icon-bars overlay"></span>
+  </li>
+</ul>
+
+      
+
+    </div>
+  </nav>
+
+  
+  <!-- Menu Icon -->
+  <div class="sidepanel" id="mySidepanel" ">
+    <ul class="sidenav" style="margin-right: 0 !important;">
+      <li class="dropdown-btn">
+        <a>Data <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+      </li>
+      <div class="dropdown-container">
+        <a href="#">Layers</a>
+        <a href="#">Documents</a>
+        <a href="#">Remote Services</a>
+   
+        <a href="#">Upload Layer</a>
+        <a href="#">Create Layer</a>
+        <a href="#">Upload Document</a>
+      </div>
+      <li class="dropdown-btn">
+        <a>Maps<i class="fa fa-angle-down" aria-hidden="true"></i></a>
+      </li>
+      <div class="dropdown-container">
+        <a href="#">Explore Maps</a>
+        <a href="#">Create Map</a>
+      </div>
+      <li class="dropdown-btn">
+        <a>Apps<i class="fa fa-angle-down" aria-hidden="true"></i></a>
+      </li>    
+      <div class="dropdown-container">
+        <a href="#">Explore Apps</a>
+      </div>
+      <li class="dropdown-btn">
+        <a>About<i class="fa fa-angle-down" aria-hidden="true"></i></a>
+      </li>
+      <div class="dropdown-container">
+        <a href="#">People</a>
+        <a href="#">Groups</a>
+        <a href="#">Group Categories</a>
+
+        <a href="#">Invite Users</a>
+
+      </div>
+    
+ 
+    <li>
+      <a href="#" class="button" href="javascript:void(0)" onclick="closeNav()">
+        <span>C</span><span>L</span><span>O</span><span>S</span><span>E</span>
+       
+        <b class="backgroundHover"></b>
+      </a>
+    </li>
+  </ul>
+  </div>
+
+
+<nav id="navbar">
+  <div class="nav-wrapper"></div>
+
+  <ul>
+    <li><a href="index.html"><i class="fa fa-fw fa-home"></i>Home</a></li>|
+    <li><a href="Services.html"><i class="fa fa-fw fa-industry"></i>Services</a></li>|
+    <li><a href="geoportal.html"class="active"><i class="fa fa-fw fa-globe"></i>Geoportal</a></li>|
+    <li><a href="Contacts.html" ><i class="fa fa-fw fa-globe"></i>Contacts</a></li>
+  </ul>
+  </div>
+</nav>
+    <!-- Menu Icon -->
+    <div class="sidepanel" id="mySidepanel" ">
+      <ul class="sidenav" style="margin-right: 0 !important;">
+        <li class="dropdown-btn">
+          <a>Data <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+        </li>
+        <div class="dropdown-container">
+          <a href="#">Layers</a>
+          <a href="#">Documents</a>
+          <a href="#">Remote Services</a>
+          <div class="line"></div>
+          <a href="#">Upload Layer</a>
+          <a href="#">Create Layer</a>
+          <a href="#">Upload Document</a>
+        </div>
+        <li class="dropdown-btn">
+          <a>Maps<i class="fa fa-angle-down" aria-hidden="true"></i></a>
+        </li>
+        <div class="dropdown-container">
+          <a href="#">Explore Maps</a>
+          <a href="#">Create Map</a>
+        </div>
+        <li class="dropdown-btn">
+          <a>Apps<i class="fa fa-angle-down" aria-hidden="true"></i></a>
+        </li>    
+        <div class="dropdown-container">
+          <a href="#">Explore Apps</a>
+        </div>
+        <li class="dropdown-btn">
+          <a>About<i class="fa fa-angle-down" aria-hidden="true"></i></a>
+        </li>
+        <div class="dropdown-container">
+          <a href="#">People</a>
+          <a href="#">Groups</a>
+          <a href="#">Group Categories</a>
+          <div class="line"></div>
+          <a href="#">Invite Users</a>
+  
+        </div>
+      
+   
+      <li>
+        <a href="#" class="button" href="javascript:void(0)" onclick="closeNav()">
+          <span>C</span><span>L</span><span>O</span><span>S</span><span>E</span>
+         
+          <b class="backgroundHover"></b>
+        </a>
+      </li>
+    </ul>
+    </div>
+
+        <!-- Menu Icon -->
+        <div class="mobileIcon">
+          <span class="icon icon-bars"></span>
+          <span class="icon icon-bars overlay"></span>
+        </div>
+        
+        
+        <div class="overlay-menu">
+          <ul id="menu">
+            <li>
+              <a href="index.html"><i class="fa fa-home" aria-hidden="true"></i>Home</a>
+            </li>
+            <li style="font-weight: 550;">
+              <a href="geoportal.html"><i class="fa fa-globe" aria-hidden="true"></i>Geoportal</a>
+            </li>
+    
+    
+            </ul>
+        </div>
+    <!--Body-->
+  <!--  <nav-bar class="main-menu">
+      <ul>
+          <li>
+              <a href="http://justinfarrow.com">
+                  <i class="fa fa-home fa-2x"></i>
+                  <span class="nav-text">
+                      Dashboard
+                  </span>
+              </a>
+            
+          </li>
+          <li class="has-subnav">
+              <a href="#">
+                  <i class="fa fa-laptop fa-2x"></i>
+                  <span class="nav-text">
+                      A1
+                  </span>
+              </a>
+              
+          </li>
+          <li class="has-subnav">
+              <a href="#">
+                 <i class="fa fa-list fa-2x"></i>
+                  <span class="nav-text">
+                      A2
+                  </span>
+              </a>
+              
+          </li>
+          <li class="has-subnav">
+              <a href="#">
+                 <i class="fa fa-folder-open fa-2x"></i>
+                  <span class="nav-text">
+                      A3
+                  </span>
+              </a>
+             
+          </li>
+          <li>
+              <a href="#">
+                  <i class="fa fa-bar-chart-o fa-2x"></i>
+                  <span class="nav-text">
+                      A4
+                  </span>
+              </a>
+          </li>
+          <li>
+              <a href="#">
+                  <i class="fa fa-font fa-2x"></i>
+                  <span class="nav-text">
+                     A5
+                  </span>
+              </a>
+          </li>
+          <li>
+             <a href="#">
+                 <i class="fa fa-table fa-2x"></i>
+                  <span class="nav-text">
+                      A6
+                  </span>
+              </a>
+          </li>
+          <li>
+             <a href="#">
+                  <i class="fa fa-map-marker fa-2x"></i>
+                  <span class="nav-text">
+                      A7
+                  </span>
+              </a>
+          </li>
+          <li>
+              <a href="#">
+                 <i class="fa fa-info fa-2x"></i>
+                  <span class="nav-text">
+                      A8
+                  </span>
+              </a>
+          </li>
+      </ul>
+
+      <ul class="logout">
+          <li>
+             <a href="#">
+                   <i class="fa fa-power-off fa-2x"></i>
+                  <span class="nav-text">
+                      Logout
+                  </span>
+              </a>
+          </li>  
+      </ul>
+  </nav-bar>-->
+  <div class="side-panel" id="side-panel">
+    <div id="sidepanel-heading" class="heading">
+      <span id="content-heading">Story Board</span>
+    </div>
+    <div class="story-tabs">
+  
+      <input type="radio" id="tab1" name="tab-control" checked>
+      <input type="radio" id="tab2" name="tab-control">
+      <input type="radio" id="tab3" name="tab-control">  
+      <input type="radio" id="tab4" name="tab-control">
+      <ul>
+        <li title="Story 1"><label for="tab1" role="button"><span> 1</span></label></li>
+        <li title="Story 2"><label for="tab2" role="button"><span>2</span></label></li>
+        <li title="Story 3"><label for="tab3" role="button"><span>3</span></label></li>    
+        <li title="Story 4"><label for="tab4" role="button"><span>4</span></label></li>
+      </ul>
+      
+      <div class="slider"><div class="indicator"></div></div>
+      <div class="content">
+        <section>
+          <h2>Story 1</h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea dolorem sequi, quo tempore in eum obcaecati atque quibusdam officiis est dolorum minima deleniti ratione molestias numquam. Voluptas voluptates quibusdam cum?</section>
+            <section>
+              <h2>Story 2</h2>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem quas adipisci a accusantium eius ut voluptatibus ad impedit nulla, ipsa qui. Quasi temporibus eos commodi aliquid impedit amet, similique nulla.</section>
+            <section>
+              <h2>Story 3</h2>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam nemo ducimus eius, magnam error quisquam sunt voluptate labore, excepturi numquam! Alias libero optio sed harum debitis! Veniam, quia in eum.</section>
+        <section>
+              <h2>Story 4</h2>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa dicta vero rerum? Eaque repudiandae architecto libero reprehenderit aliquam magnam ratione quidem? Nobis doloribus molestiae enim deserunt necessitatibus eaque quidem incidunt.</section>
+      </div>
+    </div>  
+    <div data-position="left" class="side-bar">
+      <div class="item tooltip" id="zoom-in"><i class="fa fa-search-plus"></i>
+        <span class="tooltiptext">Zoom in</span>
+      </div>
+      <div class="item tooltip" id="zoom-out"><i class="fa fa-search-minus"></i>
+        <span class="tooltiptext">Zoom Out</span>
+      </div>
+      <div class="item tooltip" id="zoom-restore">T-N
+        <span class="tooltiptext">To Tharaka Nithi </span>
+      </div>
+      <div class="item tooltip" id="zoom-panto">KEN
+        <span class="tooltiptext">To Kenya</span>
+      </div>
+      <div class="item tooltip card-popup" ><i class="fas fa-info"></i>
+        <span class="tooltiptext">Hints and attribution</span>
+      </div>
+ 
+  
+      <div class="item bottom tooltip" id="show_hide"><i class="fa fa-angle-double-right"></i>
+        <span class="tooltiptext">Storyboard</span>
+      </div>
+    </div>
+  </div>
+  
+  <div class="geomap" id="geomap">
+    <script src="js/geoportal.js"></script>
+  </div>
+  
+  <div class="cd-popup" role="alert">
+    <div class="cd-popup-container">
+      <ul>
+        <li>
+          <a>Icons:Geoapy</a>
+        </li>
+        <li>
+          <a>Icons:Geoapy</a>
+        </li>
+      </ul>
+  
+      <a href="#0" class="cd-popup-close img-replace">Close</a>
+    </div> <!-- cd-popup-container -->
+  </div> <!-- cd-popup -->
+
+<!--Scripts-->
+<script src="js/vendor/modernizr-3.11.2.min.js"></script>
+<script src="js/plugins.js"></script>
+<script src="js/main.js"></script>
+<script src="js/sidemenu.js"></script>
+<script src="js/mobilemenu.js"></script>
+
+<!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+<script>
+  window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+  ga('create', 'UA-XXXXX-Y', 'auto'); ga('set', 'anonymizeIp', true); ga('set', 'transport', 'beacon'); ga('send', 'pageview')
+</script>
+<script src="https://www.google-analytics.com/analytics.js" async></script>
+<script>
+  "use strict";
+let EventHandler = {
+    ShowHideSideBar: function () {
+        if (document.getElementById("side-panel").className.indexOf("open") !== -1) {
+            document.getElementById("side-panel").className = "side-panel";
+            document.getElementById("side-panel").className += " close";
+            document.getElementById('show_hide').childNodes[0].className = "fa fa-angle-double-right";
+            return;
+        }
+        document.getElementById("side-panel").className = "side-panel";
+        document.getElementById("side-panel").className += " open";
+        document.getElementById('show_hide').childNodes[0].className = "fa fa-angle-double-left";
+    }
+};
+
+    document.getElementById('show_hide').onclick = EventHandler.ShowHideSideBar;
+
+</script>
+<script>
+  jQuery(document).ready(function($){
+	//open popup
+	$('.card-popup').on('click', function(event){
+		event.preventDefault();
+		$('.cd-popup').addClass('is-visible');
+	});
+	
+	//close popup
+	$('.cd-popup').on('click', function(event){
+		if( $(event.target).is('.cd-popup-close') || $(event.target).is('.cd-popup') ) {
+			event.preventDefault();
+			$(this).removeClass('is-visible');
+		}
+	});
+	//close popup when clicking the esc keyboard button
+	$(document).keyup(function(event){
+    	if(event.which=='27'){
+    		$('.cd-popup').removeClass('is-visible');
+	    }
+    });
+});
+</script>
+
+</body>
+
+</html>

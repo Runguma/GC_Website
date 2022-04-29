@@ -1,0 +1,4 @@
+// All material copyright ESRI, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/3.36/esri/copyright.txt for details.
+//>>built
+define("dojo/_base/declare dojo/_base/lang dojo/has ../kernel ../lang ./DataSource".split(" "),function(a,d,e,f,b,c){return a(c,{declaredClass:"esri.layers.TableDataSource",toJson:function(){return b.fixJson({type:"table",workspaceId:this.workspaceId,dataSourceName:this.dataSourceName,gdbVersion:this.gdbVersion})}})});

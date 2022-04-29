@@ -1,0 +1,59 @@
+// All material copyright ESRI, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/3.36/esri/copyright.txt for details.
+(function (global) {
+
+  function getCookieItem(sKey) {
+    return decodeURIComponent(document.cookie.replace(new RegExp("(?:(?:^|.*;)\\s*" + encodeURIComponent(sKey).replace(/[\-\.\+\*]/g, "\\$&") + "\\s*\\=\\s*([^;]*).*$)|^.*$"), "$1")) || null;
+  }
+
+  var rtlLocales = ["ar", "he"],
+      browserLocale = navigator.language ? navigator.language : navigator.userLanguage,  //default dojoConfig.locale to browser language when no cookie present
+      userLocale = getCookieItem("esri_locale"),
+      sessionLocale = getCookieItem("arcgisLocale"),
+      locale, isRtl = false,
+      dirNode = document.getElementsByTagName("html")[0],
+      dojoConfig;
+
+  dojoConfig = {
+    async: true,
+    baseUrl: "js",
+    deps: ["presentation/main"],
+    packages: [
+      { "name": "esri", "location": "jsapi/esri" },
+      { "name": "dojo", "location": "jsapi/dojo" },
+      { "name": "dijit", "location": "jsapi/dijit" },
+      { "name": "dojox", "location": "jsapi/dojox" },
+      { "name": "dgrid", "location": "jsapi/dgrid" },
+      { "name": "moment", "location": "jsapi/moment" },
+      { "name": "put-selector", "location": "jsapi/put-selector" },
+      { "name": "xstyle", "location": "jsapi/xstyle" },
+      "presentation"
+    ],
+    has: {
+      "esri-featurelayer-webgl": 1
+    }
+  };
+
+  if (userLocale) {
+    locale = userLocale;
+  } else if (sessionLocale) {
+    locale = sessionLocale;
+  } else {
+    locale = (browserLocale && browserLocale.toLowerCase()) || "en-us";
+  }
+
+  for (var i = 0; i < rtlLocales.length; i++) {
+    isRtl = locale.indexOf(rtlLocales[i]) !== -1;
+    if (isRtl){
+      break;
+    }
+  }
+
+  dojoConfig.locale = locale;
+  dirNode.setAttribute("dir", isRtl ? "rtl" : "ltr");
+  dirNode.className += (isRtl ? " esriRtl" : " esriLtr");
+  dirNode.className += " " + locale + " " + (locale.indexOf("-") !== -1 ? locale.split("-")[0] : "");
+
+  global.dojoConfig = dojoConfig;
+
+})(this);

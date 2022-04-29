@@ -1,0 +1,5 @@
+// All material copyright ESRI, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/3.36/esri/copyright.txt for details.
+//>>built
+define("dojo/_base/declare dojo/_base/lang dojo/_base/json dojo/has ../kernel ../config ../request ../urlUtils ./ServiceGeneratedFeatureCollection".split(" "),function(d,h,e,k,l,a,f,b,g){return d([g],{declaredClass:"esri.layers.GeoRSSLayer",serviceUrl:b.getProtocolForWebResource()+"//utility.arcgis.com/sharing/rss",constructor:function(c,m){this._url=b.urlToObject(this.url=c);a.defaults.geoRSSService&&(this.serviceUrl=a.defaults.geoRSSService);this._createLayer()},parse:function(){return this._io=
+f({url:this.serviceUrl,content:{url:this.url,refresh:this.loaded?!0:void 0,outSR:this._outSR?e.toJson(this._outSR.toJson()):void 0},callbackParamName:"callback"})},_initLayer:function(c){this.inherited(arguments);this.loaded||(this.loaded=!0,this.onLoad(this))}})});

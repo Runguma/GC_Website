@@ -1,0 +1,5 @@
+// All material copyright ESRI, All Rights Reserved, unless otherwise specified.
+// See https://js.arcgis.com/3.36/esri/copyright.txt for details.
+//>>built
+define("dojo/_base/declare dojo/_base/lang dojo/has ../kernel ../config ./DynamicMapServiceLayer ./ImageServiceLayerMixin".split(" "),function(d,e,k,l,f,g,h){return d([g,h],{declaredClass:"esri.layers.ArcGISImageServiceLayer",constructor:function(a,b){this._initialize(a,b);this.useMapImage=b&&b.useMapImage||!1},refresh:function(a){if(!0===a)this.inherited(arguments);else{var b=this.disableClientCaching;this.disableClientCaching=!0;this.inherited(arguments);this.disableClientCaching=b}},setRenderer:function(a,
+b){this.renderer=a;this.onRendererChange();b||this.refresh(!0)},exportMapImage:function(a,b){var c=f.defaults.map;a=e.mixin({size:c.width+","+c.height},this._params,a?a.toJson(this.normalization):{},{f:"json"});delete a._ts;this._exportMapImage(this._url.path+"/exportImage",a,b)}})});

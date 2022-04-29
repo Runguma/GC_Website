@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<!-- saved from url=(0048)https://damp-reaches-87397.herokuapp.com/leaflet -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title>Wind Animation Google Maps</title>
+
+    <script src="./Wind Animation Google Maps_files/windable.min.js.download" defer=""></script>
+
+    <link rel="stylesheet" href="./Wind Animation Google Maps_files/leaflet.css">
+
+    <script src="./Wind Animation Google Maps_files/leaflet.js.download" defer=""></script>
+    <script src="./Wind Animation Google Maps_files/leaflet_canvas_layer.js.download" defer=""></script>
+    <script src="./Wind Animation Google Maps_files/d3.min.js.download" defer=""></script>
+
+    <style>
+      html, body, #leaflet-map-canvas {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0 0 0 0;
+      }
+    </style>
+  </head>
+
+  <body class="">
+    <div id="leaflet-map-canvas" class="leaflet-container leaflet-fade-anim" tabindex="0" style="position: relative;"><div class="leaflet-map-pane" style="transform: translate3d(-719px, -153px, 0px);"><div class="leaflet-tile-pane"><div class="leaflet-layer"><div class="leaflet-tile-container"></div><div class="leaflet-tile-container leaflet-zoom-animated"><img class="leaflet-tile leaflet-tile-loaded" src="./Wind Animation Google Maps_files/2.png" style="height: 256px; width: 256px; left: 432px; top: 64px;"><img class="leaflet-tile leaflet-tile-loaded" src="./Wind Animation Google Maps_files/2(1).png" style="height: 256px; width: 256px; left: 688px; top: 64px;"><img class="leaflet-tile leaflet-tile-loaded" src="./Wind Animation Google Maps_files/3.png" style="height: 256px; width: 256px; left: 432px; top: 320px;"><img class="leaflet-tile leaflet-tile-loaded" src="./Wind Animation Google Maps_files/3(1).png" style="height: 256px; width: 256px; left: 688px; top: 320px;"><img class="leaflet-tile leaflet-tile-loaded" src="./Wind Animation Google Maps_files/1.png" style="height: 256px; width: 256px; left: 432px; top: -192px;"><img class="leaflet-tile leaflet-tile-loaded" src="./Wind Animation Google Maps_files/1(1).png" style="height: 256px; width: 256px; left: 688px; top: -192px;"><img class="leaflet-tile leaflet-tile-loaded" src="./Wind Animation Google Maps_files/2(2).png" style="height: 256px; width: 256px; left: 176px; top: 64px;"><img class="leaflet-tile leaflet-tile-loaded" src="./Wind Animation Google Maps_files/2(3).png" style="height: 256px; width: 256px; left: 944px; top: 64px;"><img class="leaflet-tile leaflet-tile-loaded" src="./Wind Animation Google Maps_files/3(2).png" style="height: 256px; width: 256px; left: 176px; top: 320px;"><img class="leaflet-tile leaflet-tile-loaded" src="./Wind Animation Google Maps_files/3(3).png" style="height: 256px; width: 256px; left: 944px; top: 320px;"><img class="leaflet-tile leaflet-tile-loaded" src="./Wind Animation Google Maps_files/4.png" style="height: 256px; width: 256px; left: 432px; top: 576px;"><img class="leaflet-tile leaflet-tile-loaded" src="./Wind Animation Google Maps_files/4(1).png" style="height: 256px; width: 256px; left: 688px; top: 576px;"><img class="leaflet-tile leaflet-tile-loaded" src="./Wind Animation Google Maps_files/1(2).png" style="height: 256px; width: 256px; left: 176px; top: -192px;"><img class="leaflet-tile leaflet-tile-loaded" src="./Wind Animation Google Maps_files/1(3).png" style="height: 256px; width: 256px; left: 944px; top: -192px;"><img class="leaflet-tile leaflet-tile-loaded" src="./Wind Animation Google Maps_files/4(2).png" style="height: 256px; width: 256px; left: 176px; top: 576px;"><img class="leaflet-tile leaflet-tile-loaded" src="./Wind Animation Google Maps_files/4(3).png" style="height: 256px; width: 256px; left: 944px; top: 576px;"><img class="leaflet-tile leaflet-tile-loaded" src="./Wind Animation Google Maps_files/2(4).png" style="height: 256px; width: 256px; left: -80px; top: 64px;"><img class="leaflet-tile leaflet-tile-loaded" src="./Wind Animation Google Maps_files/2(5).png" style="height: 256px; width: 256px; left: 1200px; top: 64px;"><img class="leaflet-tile leaflet-tile-loaded" src="./Wind Animation Google Maps_files/3(4).png" style="height: 256px; width: 256px; left: -80px; top: 320px;"><img class="leaflet-tile leaflet-tile-loaded" src="./Wind Animation Google Maps_files/3(5).png" style="height: 256px; width: 256px; left: 1200px; top: 320px;"><img class="leaflet-tile leaflet-tile-loaded" src="./Wind Animation Google Maps_files/1(4).png" style="height: 256px; width: 256px; left: -80px; top: -192px;"><img class="leaflet-tile leaflet-tile-loaded" src="./Wind Animation Google Maps_files/1(5).png" style="height: 256px; width: 256px; left: 1200px; top: -192px;"><img class="leaflet-tile leaflet-tile-loaded" src="./Wind Animation Google Maps_files/4(4).png" style="height: 256px; width: 256px; left: -80px; top: 576px;"><img class="leaflet-tile leaflet-tile-loaded" src="./Wind Animation Google Maps_files/4(5).png" style="height: 256px; width: 256px; left: 1200px; top: 576px;"><img class="leaflet-tile leaflet-tile-loaded" src="./Wind Animation Google Maps_files/3(6).png" style="height: 256px; width: 256px; left: 1456px; top: 320px;"><img class="leaflet-tile leaflet-tile-loaded" src="./Wind Animation Google Maps_files/2(6).png" style="height: 256px; width: 256px; left: 1456px; top: 64px;"><img class="leaflet-tile leaflet-tile-loaded" src="./Wind Animation Google Maps_files/4(6).png" style="height: 256px; width: 256px; left: 1456px; top: 576px;"><img class="leaflet-tile leaflet-tile-loaded" src="./Wind Animation Google Maps_files/5.png" style="height: 256px; width: 256px; left: 688px; top: 832px;"><img class="leaflet-tile leaflet-tile-loaded" src="./Wind Animation Google Maps_files/5(1).png" style="height: 256px; width: 256px; left: 432px; top: 832px;"><img class="leaflet-tile leaflet-tile-loaded" src="./Wind Animation Google Maps_files/5(2).png" style="height: 256px; width: 256px; left: 944px; top: 832px;"><img class="leaflet-tile leaflet-tile-loaded" src="./Wind Animation Google Maps_files/5(3).png" style="height: 256px; width: 256px; left: 176px; top: 832px;"><img class="leaflet-tile leaflet-tile-loaded" src="./Wind Animation Google Maps_files/5(4).png" style="height: 256px; width: 256px; left: 1200px; top: 832px;"><img class="leaflet-tile leaflet-tile-loaded" src="./Wind Animation Google Maps_files/5(5).png" style="height: 256px; width: 256px; left: -80px; top: 832px;"><img class="leaflet-tile leaflet-tile-loaded" src="./Wind Animation Google Maps_files/5(6).png" style="height: 256px; width: 256px; left: 1456px; top: 832px;"><img class="leaflet-tile leaflet-tile-loaded" src="./Wind Animation Google Maps_files/3(7).png" style="height: 256px; width: 256px; left: 1712px; top: 320px;"><img class="leaflet-tile leaflet-tile-loaded" src="./Wind Animation Google Maps_files/2(7).png" style="height: 256px; width: 256px; left: 1712px; top: 64px;"><img class="leaflet-tile leaflet-tile-loaded" src="./Wind Animation Google Maps_files/4(7).png" style="height: 256px; width: 256px; left: 1712px; top: 576px;"></div></div><div class="leaflet-layer"><canvas class="leaflet-tile-container leaflet-zoom-animated" width="663" height="665" style="position: absolute; top: 0px; left: 0px; pointer-events: none; z-index: 0; transform: translate3d(719px, 153px, 0px); width: 663px; height: 665px;"></canvas><canvas class="leaflet-tile-container leaflet-zoom-animated" style="position: absolute; top: 0px; left: 0px; pointer-events: none; z-index: 0; display: none;"></canvas></div></div><div class="leaflet-objects-pane"><div class="leaflet-shadow-pane"></div><div class="leaflet-overlay-pane"></div><div class="leaflet-marker-pane"></div><div class="leaflet-popup-pane"></div></div></div><div class="leaflet-control-container"><div class="leaflet-top leaflet-left"><div class="leaflet-control-zoom leaflet-bar leaflet-control"><a class="leaflet-control-zoom-in" href="https://damp-reaches-87397.herokuapp.com/leaflet#" title="Zoom in">+</a><a class="leaflet-control-zoom-out" href="https://damp-reaches-87397.herokuapp.com/leaflet#" title="Zoom out">-</a></div></div><div class="leaflet-top leaflet-right"></div><div class="leaflet-bottom leaflet-left"></div><div class="leaflet-bottom leaflet-right"><div class="leaflet-control-attribution leaflet-control"><a href="http://leafletjs.com/" title="A JS library for interactive maps">Leaflet</a> | Map data © <a href="http://openstreetmap.org/">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com/">Mapbox</a></div></div></div></div>
+
+    <script type="text/javascript">
+      window.onload = function() {
+        // Initialize the map.
+        const id = 'leaflet-map-canvas';
+        const element = document.getElementById(id);
+        const map = L.map(id).setView([39.3, -45.8], 3);
+
+        L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
+          attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
+          maxZoom: 18,
+          id: 'dannycochran.00kfkg04',
+          accessToken: 'pk.eyJ1IjoiZGFubnljb2NocmFuIiwiYSI6ImNpbmZjYWUxMTB4dGp1OGx3NXdrbjhxbXcifQ.t1CXHbqB108Se78ipi4StQ'
+        }).addTo(map);
+
+        const MyLayer = L.CanvasLayer.extend({render: () => {}});
+        const layer = new MyLayer();
+        layer.addTo(map);
+
+        const windMap = new WindMap({
+          canvas: layer.getCanvas(),
+          extent: () => {
+            const bounds = map.getBounds();
+            return {
+              width: element.clientWidth,
+              height: element.clientHeight,
+              latlng:[
+                [bounds._southWest.lng, bounds._southWest.lat],
+                [bounds._northEast.lng, bounds._northEast.lat]
+              ]
+            };
+          }
+        });
+        ['bounds_changed', 'movestart', 'move'].forEach(listener => {
+          map.on(listener, windMap.update.bind(windMap));
+        });
+
+        // Fetch data for 700 millibars.
+        const mapDataUrl = 'https://raw.githubusercontent.com/dannycochran/windable/master/data/2016040900_700.json'
+        d3.json(mapDataUrl, (err, windData) => {
+          windMap.update({data: windData});
+        });
+      };
+    </script>
+  
+
+</body></html>
